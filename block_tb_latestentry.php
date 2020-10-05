@@ -84,9 +84,9 @@ class block_tb_latestentry extends block_base {
             return $this->content;
         }
 
-        require_once ($CFG->dirroot . '/blog/lib.php');
-        require_once ($CFG->dirroot . '/blog/locallib.php');
-        require_once ($CFG->libdir . '/filelib.php');
+        require_once($CFG->dirroot . '/blog/lib.php');
+        require_once($CFG->dirroot . '/blog/locallib.php');
+        require_once($CFG->libdir . '/filelib.php');
 
         $leeloolxplicense = get_config('block_tb_latestentry')->license;
 
