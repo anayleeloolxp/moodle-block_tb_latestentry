@@ -25,9 +25,9 @@
     float: right;
     font-size: 20px;
     padding: .5rem 5rem;
-    color: #fff!important;
-    background-color: #00bcbe !important;
-    border-color: #00bcbe !important;
+    color: #fff;
+    background-color: #00bcbe;
+    border-color: #00bcbe;
     margin-right: 2%;
 }
 .home_articles_content .recent_blogdescription {

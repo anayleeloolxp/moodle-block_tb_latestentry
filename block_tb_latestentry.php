@@ -26,8 +26,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * This block simply outputs a list of links to Leeloo LXP Latest Entry, depending on
- * the context of the current page.
+ * This block simply outputs a list of links to Leeloo LXP Latest Entry
+ *
  */
 class block_tb_latestentry extends block_base {
 
@@ -84,9 +84,9 @@ class block_tb_latestentry extends block_base {
             return $this->content;
         }
 
-        require_once($CFG->dirroot . '/blog/lib.php');
-        require_once($CFG->dirroot . '/blog/locallib.php');
-        require_once($CFG->libdir . '/filelib.php');
+        require_once ($CFG->dirroot . '/blog/lib.php');
+        require_once ($CFG->dirroot . '/blog/locallib.php');
+        require_once ($CFG->libdir . '/filelib.php');
 
         $leeloolxplicense = get_config('block_tb_latestentry')->license;
 
@@ -206,7 +206,14 @@ class block_tb_latestentry extends block_base {
                 $entrylink .= html_writer::link($viewblogurl, $entry->subject, array('class' => 'recent_blogtitle'));
 
                 $entrylink .= html_writer::div(
-                    substr_replace(strip_tags($entry->summary), "...", 200) . html_writer::link($viewblogurl, 'Read More', array('class' => 'recent_blogmore')),
+                    substr_replace(
+                        strip_tags($entry->summary), "...", 200
+                    ) .
+                    html_writer::link(
+                        $viewblogurl,
+                        'Read More',
+                        array('class' => 'recent_blogmore')
+                    ),
                     'recent_blogdescription'
                 );
 
