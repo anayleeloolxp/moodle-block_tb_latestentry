@@ -66,11 +66,11 @@ class block_tb_latestentry extends block_base {
     public function get_content() {
         global $CFG;
 
-        if ($this->content !== NULL) {
+        if ($this->content !== null) {
             return $this->content;
         }
 
-        // verify blog is enabled
+        // Verify blog is enabled.
         if (empty($CFG->enableblogs)) {
             $this->content = new stdClass();
             $this->content->text = '';
@@ -84,9 +84,9 @@ class block_tb_latestentry extends block_base {
             return $this->content;
         }
 
-        require_once ($CFG->dirroot . '/blog/lib.php');
-        require_once ($CFG->dirroot . '/blog/locallib.php');
-        require_once ($CFG->libdir . '/filelib.php');
+        require_once($CFG->dirroot . '/blog/lib.php');
+        require_once($CFG->dirroot . '/blog/locallib.php');
+        require_once($CFG->libdir . '/filelib.php');
 
         $leeloolxplicense = get_config('block_tb_latestentry')->license;
 
@@ -160,16 +160,16 @@ class block_tb_latestentry extends block_base {
             $filter['module'] = $context->instanceid;
             $a = new stdClass;
             $a->type = get_string('modulename', $this->page->cm->modname);
-            $strview = get_string('viewallmodentries', 'blog', $a);
+            get_string('viewallmodentries', 'blog', $a);
             $url->param('modid', $context->instanceid);
         } else if ($context->contextlevel == CONTEXT_COURSE) {
             $filter['course'] = $context->instanceid;
             $a = new stdClass;
             $a->type = get_string('course');
-            $strview = get_string('viewblogentries', 'blog', $a);
+            get_string('viewblogentries', 'blog', $a);
             $url->param('courseid', $context->instanceid);
         } else {
-            $strview = get_string('viewsiteentries', 'blog');
+            get_string('viewsiteentries', 'blog');
         }
         $filter['since'] = $settingleeloolxp->interval_time_consider;
 
@@ -205,7 +205,10 @@ class block_tb_latestentry extends block_base {
 
                 $entrylink .= html_writer::link($viewblogurl, $entry->subject, array('class' => 'recent_blogtitle'));
 
-                $entrylink .= html_writer::div(substr_replace(strip_tags($entry->summary), "...", 200) . html_writer::link($viewblogurl, 'Read More', array('class' => 'recent_blogmore')), 'recent_blogdescription');
+                $entrylink .= html_writer::div(
+                    substr_replace(strip_tags($entry->summary), "...", 200) . html_writer::link($viewblogurl, 'Read More', array('class' => 'recent_blogmore')),
+                    'recent_blogdescription'
+                );
 
                 $entrylink .= '</div>';
 

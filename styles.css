@@ -26,9 +26,8 @@
     font-size: 20px;
     padding: .5rem 5rem;
     color: #fff!important;
-    background-color: #00bcbe!important;
-    border-color: #00bcbe!important;
-    /*margin-top: -45px;*/
+    background-color: #00bcbe !important;
+    border-color: #00bcbe !important;
     margin-right: 2%;
 }
 .home_articles_content .recent_blogdescription {
@@ -38,8 +37,9 @@
     font-size: 17px;
     margin: 0;
 }
-@media only screen and (max-width: 991px){
-    .block_tb_latestentry ul.list+a {
+
+@media only screen and (max-width: 991px) {
+    .block_tb_latestentry ul.list + a {
         font-size: 15px;
         padding: .5rem 3rem;
     }
