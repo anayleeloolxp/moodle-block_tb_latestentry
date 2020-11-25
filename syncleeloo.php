@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version details
+ * Moodle Get settings from L
  *
  * @package    block_tb_latestentry
  * @copyright  2020 Leeloo LXP (https://leeloolxp.com)
@@ -23,9 +23,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
+require('../../config.php');
 
-$plugin->version = 2019111800; // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires = 2019111200; // Requires this Moodle version.
-$plugin->component = 'block_tb_latestentry'; // Full name of the plugin (used for diagnostics).
-$plugin->cron = 60*5; //5mins.
+require_once($CFG->libdir . '/filelib.php');
+require_once($CFG->dirroot . '/blocks/tb_latestentry/locallib.php');
+updateconflatestentry();

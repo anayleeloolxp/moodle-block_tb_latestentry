@@ -25,10 +25,17 @@
 defined('MOODLE_INTERNAL') || die;
 
 if ($ADMIN->fulltree) {
-    $settings->add(new admin_setting_configtext(
+    require_once($CFG->dirroot . '/blocks/tb_latestentry/lib.php');
+
+    $setting = new admin_setting_configtext(
         'block_tb_latestentry/license',
         get_string('license', 'block_tb_latestentry'),
         get_string('license', 'block_tb_latestentry'),
         0
-    ));
+    );
+    $setting->set_updatedcallback(updateconflatestentry());
+    $settings->add($setting);
+
+    $setting = new admin_setting_configlatestentry('block_tb_latestentry/settingsjson', '', '', '', PARAM_RAW);
+    $settings->add($setting);
 }
