@@ -94,7 +94,7 @@ class block_tb_latestentry extends block_base {
         $settingleeloolxp = $resposedata->data->block_settings;
 
         if (empty($settingleeloolxp->interval_time_consider)) {
-            $settingleeloolxp->interval_time_consider = 8400;
+            @$settingleeloolxp->interval_time_consider = 8400;
         }
 
         if (empty($settingleeloolxp->no_of_entires)) {
@@ -156,7 +156,7 @@ class block_tb_latestentry extends block_base {
                 if (isset($attachments[0]) && isset($attachments[0]) != '') {
                     $entrylink = html_writer::div(html_writer::img($attachments[0]->url, $entry->subject), 'home_articles_img');
                 } else {
-                    $entrylink = html_writer::div(html_writer::img($attachments[0]->url, $entry->subject), 'home_articles_img');
+                    $entrylink = html_writer::div(html_writer::img(@$attachments[0]->url, $entry->subject), 'home_articles_img');
                 }
 
                 $entrylink .= '<div class="home_articles_content">';
@@ -196,7 +196,7 @@ class block_tb_latestentry extends block_base {
     public function has_config() {
         return true;
     }
-    
+
     /**
      * Get settings from Leeloo
      */
