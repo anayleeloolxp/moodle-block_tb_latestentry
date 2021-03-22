@@ -15,7 +15,7 @@
 }
 .home_articles_content a.recent_blogtitle {
     font-weight: 700;
-    font-size: 25px;
+    font-size: 22px;
     margin: 0 0 20px;
     display: inline-block;
     color: #737373;
@@ -47,7 +47,6 @@
         font-size: 15px;
     }
     .home_articles_content a.recent_blogtitle {
-        font-size: 22px;
         margin: 0 0 5px;
     }
 }
