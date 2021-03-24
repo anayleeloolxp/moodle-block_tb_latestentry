@@ -165,7 +165,7 @@ class block_tb_latestentry extends block_base {
                 if (isset($attachments[0]) && isset($attachments[0]) != '') {
                     $entrylink = html_writer::div(html_writer::img($attachments[0]->url, $entry->subject), 'home_articles_img');
                 } else {
-                    $entrylink = html_writer::div(html_writer::img(@$attachments[0]->url, $entry->subject), 'home_articles_img');
+                    $entrylink = '';
                 }
 
                 $entrylink .= '<div class="home_articles_content">';
