@@ -46,7 +46,7 @@ class block_tb_latestentry extends block_base {
      * @return array
      */
     public function applicable_formats() {
-        return array('all' => true, 'my' => false, 'tag' => false);
+        return array('all' => true);
     }
 
     /**
