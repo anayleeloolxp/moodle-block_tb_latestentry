@@ -1,6 +1,9 @@
 .block_tb_latestentry {
     overflow: hidden;
 }
+.block_tb_latestentry img {
+    max-width: 100%;
+}
 .block_tb_latestentry ul.list li {
     display: flex;
     flex-wrap: wrap;
