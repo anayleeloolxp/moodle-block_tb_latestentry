@@ -205,12 +205,4 @@ class block_tb_latestentry extends block_base {
     public function has_config() {
         return true;
     }
-
-    /**
-     * Get settings from Leeloo
-     */
-    public function cron() {
-        require_once($CFG->dirroot . '/blocks/tb_latestentry/lib.php');
-        updateconflatestentry();
-    }
 }
