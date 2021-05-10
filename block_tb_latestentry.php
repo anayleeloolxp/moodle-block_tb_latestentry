@@ -152,6 +152,11 @@ class block_tb_latestentry extends block_base {
         $entries = $bloglisting->get_entries(0, $settingleeloolxp->no_of_entires, 4);
 
         if (!empty($entries)) {
+
+            $this->page->requires->js(new moodle_url($CFG->wwwroot . '/blocks/tb_latestentry/js/jquery.min.js'));
+            $this->page->requires->js(new moodle_url($CFG->wwwroot . '/blocks/tb_latestentry/js/owl.carousel.js'));
+            $this->page->requires->js(new moodle_url($CFG->wwwroot . '/blocks/tb_latestentry/js/owlslider.js'));
+
             $entrieslist = array();
             $viewblogurl = new moodle_url('/blog/index.php');
 
@@ -197,7 +202,7 @@ class block_tb_latestentry extends block_base {
                 $entrieslist[] = $entrylink;
             }
 
-            $this->content->text .= html_writer::alist($entrieslist, array('class' => 'list'));
+            $this->content->text .= html_writer::alist($entrieslist, array('class' => 'list lastentrylist owl-carousel owl-theme'));
             $viewallentrieslink = html_writer::link($url, get_string('viewsiteentries', 'blog'));
             $this->content->text .= $viewallentrieslink;
         } else {
