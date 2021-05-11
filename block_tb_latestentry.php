@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Leeloo LXP Latest Entry Block page.
+ * Leeloo LXP Latest Blog Entry Block page.
  *
  * @package   block_tb_latestentry
  * @copyright  2020 Leeloo LXP (https://leeloolxp.com)
@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * This block simply outputs a list of links to Leeloo LXP Latest Entry
+ * This block simply outputs a list of links to Leeloo LXP Latest Blog Entry
  *
  */
 class block_tb_latestentry extends block_base {

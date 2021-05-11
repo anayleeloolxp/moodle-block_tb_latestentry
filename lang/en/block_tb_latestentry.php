@@ -25,9 +25,9 @@
 
 $string['license'] = 'Leeloo LXP License ID';
 $string['norecentblogentries'] = 'No recent entries';
-$string['blocktitle'] = 'Leeloo LXP Latest Entry';
-$string['pluginname'] = 'Leeloo LXP Latest Entry';
+$string['blocktitle'] = 'Leeloo LXP Latest Blog Entry';
+$string['pluginname'] = 'Leeloo LXP Latest Blog Entry';
 $string['nolicense'] = 'Invalid Leeloo LXP License ID';
 
-$string['tb_latestentry:addinstance'] = 'Add a new Leeloo LXP Latest Entry Block';
-$string['privacy:metadata'] = 'The Leeloo LXP Latest Entry entries block only shows data stored in other locations.';
+$string['tb_latestentry:addinstance'] = 'Add a new Leeloo LXP Latest Blog Entry Block';
+$string['privacy:metadata'] = 'The Leeloo LXP Latest Blog Entry entries block only shows data stored in other locations.';
