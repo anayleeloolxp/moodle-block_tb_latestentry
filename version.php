@@ -25,11 +25,11 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2021061500; // The current plugin version (Date: YYYYMMDDXX).
+$plugin->version = 2021061501; // The current plugin version (Date: YYYYMMDDXX).
 $plugin->requires = 2019111200; // Requires this Moodle version.
 $plugin->component = 'block_tb_latestentry'; // Full name of the plugin (used for diagnostics).
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = '1.0.3';
+$plugin->release = '1.0.4';
 $plugin->dependencies = array(
     'local_leeloolxpcontentapi' => 2021031907,
 );

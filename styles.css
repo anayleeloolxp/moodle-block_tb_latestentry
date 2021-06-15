@@ -38,10 +38,12 @@
     height: calc(100% - 60px );
     position: relative;
     min-height: 80px;
+    padding-bottom: 20px;
 }
 .home_articles_content .recent_blogdescription .recent_blogmore {
     bottom: 0;
     position: absolute;
+    left: 0;
 }
 .home_articles_content .recent_blogdescription p {
     font-size: 17px;
