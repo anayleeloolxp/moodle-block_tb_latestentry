@@ -205,6 +205,7 @@ class block_tb_latestentry extends block_base {
             $this->content->text .= html_writer::alist($entrieslist, array('class' => 'list lastentrylist owl-carousel owl-theme'));
             $viewallentrieslink = html_writer::link($url, get_string('viewsiteentries', 'blog'));
             $this->content->text .= $viewallentrieslink;
+            $this->content->text .= '<p style="clear:both"></p>';
         } else {
             $this->content->text .= get_string('norecentblogentries', 'block_tb_latestentry');
         }
