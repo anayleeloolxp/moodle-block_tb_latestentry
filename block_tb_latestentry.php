@@ -153,7 +153,7 @@ class block_tb_latestentry extends block_base {
 
         if (!empty($entries)) {
 
-            $this->page->requires->js(new moodle_url($CFG->wwwroot . '/blocks/tb_latestentry/js/jquery.min.js'));
+            $this->page->requires->jquery();
             $this->page->requires->js(new moodle_url($CFG->wwwroot . '/blocks/tb_latestentry/js/owl.carousel.js'));
             $this->page->requires->js(new moodle_url($CFG->wwwroot . '/blocks/tb_latestentry/js/owlslider.js'));
 
