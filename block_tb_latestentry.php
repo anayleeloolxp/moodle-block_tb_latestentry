@@ -154,8 +154,8 @@ class block_tb_latestentry extends block_base {
         if (!empty($entries)) {
 
             $this->page->requires->jquery();
-            $this->page->requires->js(new moodle_url($CFG->wwwroot . '/blocks/tb_latestentry/js/owl.carousel.js'));
-            $this->page->requires->js(new moodle_url($CFG->wwwroot . '/blocks/tb_latestentry/js/owlslider.js'));
+            $this->page->requires->js(new moodle_url('/blocks/tb_latestentry/js/owl.carousel.js'));
+            $this->page->requires->js(new moodle_url('/blocks/tb_latestentry/js/owlslider.js'));
 
             $entrieslist = array();
             $viewblogurl = new moodle_url('/blog/index.php');
