@@ -187,13 +187,15 @@ class block_tb_latestentry extends block_base {
 
                 $entrylink .= html_writer::div(
                     substr_replace(
-                        strip_tags($entry->summary), "...", 200
+                        strip_tags($entry->summary),
+                        "...",
+                        200
                     ) .
-                    html_writer::link(
-                        $viewblogurl,
-                        'Read More',
-                        array('class' => 'recent_blogmore')
-                    ),
+                        html_writer::link(
+                            $viewblogurl,
+                            'Read More',
+                            array('class' => 'recent_blogmore')
+                        ),
                     'recent_blogdescription'
                 );
 
