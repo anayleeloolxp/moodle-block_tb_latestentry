@@ -35,7 +35,7 @@
 }
 .home_articles_content .recent_blogdescription {
     margin: 0 0 20px;
-    height: calc(100% - 60px );
+    height: calc(100% - 60px);
     position: relative;
     min-height: 80px;
     padding-bottom: 20px;
