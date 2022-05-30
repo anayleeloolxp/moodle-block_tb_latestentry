@@ -25,8 +25,6 @@
 
 namespace block_tb_latestentry\privacy;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Privacy Subsystem for block_tb_latestentry implementing null_provider.
  *
