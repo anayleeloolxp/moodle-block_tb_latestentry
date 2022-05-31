@@ -30,4 +30,5 @@ $string['pluginname'] = 'Leeloo LXP Latest Blog Entry';
 $string['nolicense'] = 'Invalid Leeloo LXP License ID';
 
 $string['tb_latestentry:addinstance'] = 'Add a new Leeloo LXP Latest Blog Entry Block';
+$string['tb_latestentry:myaddinstance'] = 'Add a new Leeloo LXP Latest Blog Entry Block to Dashboard';
 $string['privacy:metadata'] = 'The Leeloo LXP Latest Blog Entry entries block only shows data stored in other locations.';
